@@ -1,0 +1,232 @@
+/* ============================================
+        BESPOKE CSS - Inspired by DocFlexify
+        ============================================
+        You can copy all the code from this <style>
+        tag and paste it into your own .css file.
+        ============================================
+        */
+
+        /* --- 1. CSS Variables & Root --- */
+        :root {
+            --color-background: #0D1117;
+            --color-card-bg: #161B22;
+            --color-border: #30363d;
+            --color-primary: #58a6ff;
+            --color-primary-hover: #79c0ff;
+            --color-text-primary: #c9d1d9;
+            --color-text-secondary: #8b949e;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --border-radius-default: 8px;
+        }
+
+        /* --- 2. Global Styles & Resets --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            line-height: 1.6;
+        }
+
+        /* --- 3. Layout & Container --- */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- 4. Header & Navigation --- */
+        .main-header {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 48px;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--color-text-primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--color-primary);
+        }
+
+        .main-nav a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            margin-left: 24px;
+            transition: color 0.2s ease;
+        }
+
+        .main-nav a:hover {
+            color: var(--color-text-primary);
+        }
+
+        /* --- 5. Reusable Components (Cards, Buttons) --- */
+        .card {
+            background-color: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-default);
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: #0d1117;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-primary-hover);
+        }
+        
+        .btn-group .btn {
+            margin-right: 12px;
+        }
+
+        /* --- 6. Typography --- */
+        h1, h2, h3 {
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--color-text-secondary);
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+        
+        ul {
+            list-style-position: inside;
+            padding-left: 8px;
+            color: var(--color-text-secondary);
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        li::marker {
+            color: var(--color-primary);
+        }
+        
+        li strong {
+            color: var(--color-text-primary);
+        }
+
+        /* --- 7. Page-Specific Sections --- */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+        }
+        
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+        
+        .quick-link-card {
+            padding: 16px;
+            text-align: center;
+        }
+        
+        .quick-link-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+
+        /* --- 8. Footer --- */
+        .main-footer {
+            padding: 32px 0;
+            margin-top: 48px;
+            border-top: 1px solid var(--color-border);
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+        }
+
+        .main-footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            margin-left: 16px;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary);
+        }
+        
+        /* --- 9. Responsive Design --- */
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-header .container {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .main-footer .container {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+            
+            .footer-links {
+                margin-top: 16px;
+            }
+        }
