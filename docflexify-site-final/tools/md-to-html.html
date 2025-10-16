@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Markdown to HTML Converter (Free) | DocFlexify</title>
+<meta name="description" content="Convert Markdown to clean HTML instantly in your browser. Free forever, no uploads. Preview and copy HTML."/>
+<link rel="stylesheet" href="/styles.css"/>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"/>
+<link rel="manifest" href="/manifest.json"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Is this converter free?","acceptedAnswer":{"@type":"Answer","text":"Yes. It’s 100% free and runs locally in your browser."}},
+    {"@type":"Question","name":"Do you upload my Markdown?","acceptedAnswer":{"@type":"Answer","text":"No. Nothing is uploaded to a server."}},
+    {"@type":"Question","name":"Can I preview the HTML?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can preview and copy the HTML output."}}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="nav container">
+  <div class="brand">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 12c0-4.418 3.582-8 8-8a8 8 0 1 1-5.657 13.657" stroke="#8bc6ff" stroke-width="2" stroke-linecap="round"/></svg>
+    <span>DocFlexify</span>
+    <span class="badge">Free • Private • In-Browser</span>
+  </div>
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/tools/md-to-pdf.html">MD→PDF</a>
+    <a href="/tools/html-to-md.html">HTML→MD</a>
+    <a href="/tools/html-to-pdf.html">HTML→PDF</a>
+    <a href="/tools/md-to-html.html">MD→HTML</a>
+    <a href="/tools/text-to-clean-html.html">Text→Clean&nbsp;HTML</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</div>
+<div class="container section">
+  <div class="card">
+    <h1>Markdown → HTML</h1>
+    <p class="lead">Paste Markdown, convert to clean HTML, preview it, and copy. Nothing leaves your browser.</p>
+    <div class="ad-slot">Ad slot — 728×90</div>
+    <div class="tool-wrap">
+      <div>
+        <label for="mdInput">Markdown input</label>
+        <textarea id="mdInput" placeholder="# Hello\n\nWrite Markdown here..."></textarea>
+      </div>
+      <div class="controls">
+        <button class="btn" id="convertBtn">Convert to HTML</button>
+        <button class="btn secondary" id="copyBtn" disabled>Copy HTML</button>
+        <button class="btn secondary" id="sampleBtn">Load sample</button>
+      </div>
+      <div>
+        <label for="htmlOutput">HTML output</label>
+        <textarea id="htmlOutput" class="output" readonly placeholder="HTML will appear here..."></textarea>
+      </div>
+      <div>
+        <label>Preview</label>
+        <div id="preview" class="preview card" style="min-height:240px;background:white;color:#051225;border:0"></div>
+      </div>
+      <div class="ad-slot">Ad slot — responsive</div>
+    </div>
+  </div>
+</div>
+<div class="footer container">
+  <div>© <span id="year"></span> DocFlexify. No bullshit: 100% free, no accounts, no tracking beyond basic analytics.</div>
+  <div class="small">Privacy-first: conversions happen locally in your browser. Insert your ad script in the <code>.ad-slot</code> containers.</div>
+  <div class="small"><a href="/privacy.html">Privacy</a> • <a href="/terms.html">Terms</a> • <a href="/sitemap.xml">Sitemap</a></div>
+</div>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script src="/js/mdToHtml.js"></script>
+</body>
+</html>

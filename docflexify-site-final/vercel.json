@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "interest-cohort=()"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/$",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/tools/md-to-pdf",
+      "destination": "/tools/md-to-pdf.html"
+    },
+    {
+      "source": "/tools/html-to-md",
+      "destination": "/tools/html-to-md.html"
+    },
+    {
+      "source": "/tools/html-to-pdf",
+      "destination": "/tools/html-to-pdf.html"
+    },
+    {
+      "source": "/tools/md-to-html",
+      "destination": "/tools/md-to-html.html"
+    },
+    {
+      "source": "/tools/text-to-clean-html",
+      "destination": "/tools/text-to-clean-html.html"
+    }
+  ]
+}

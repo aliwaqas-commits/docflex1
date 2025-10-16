@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://docflexify.vercel.app/sitemap.xml

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Text to Clean HTML (Strip Word/Styles) — Free | DocFlexify</title>
+<meta name="description" content="Convert plain text or messy HTML from Word into clean, semantic HTML. Runs locally in your browser. Free forever."/>
+<link rel="stylesheet" href="/styles.css"/>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"/>
+<link rel="manifest" href="/manifest.json"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Does this remove Word garbage HTML?","acceptedAnswer":{"@type":"Answer","text":"Yes. We strip classes, styles, and spans; keep semantic tags like p, h1–h6, ul/ol/li, a, code, pre, table."}},
+    {"@type":"Question","name":"Is conversion local?","acceptedAnswer":{"@type":"Answer","text":"Yes. Everything runs in your browser for privacy."}},
+    {"@type":"Question","name":"Can I paste plain text?","acceptedAnswer":{"@type":"Answer","text":"Yes. We’ll wrap paragraphs automatically into clean HTML."}}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="nav container">
+  <div class="brand">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 12c0-4.418 3.582-8 8-8a8 8 0 1 1-5.657 13.657" stroke="#8bc6ff" stroke-width="2" stroke-linecap="round"/></svg>
+    <span>DocFlexify</span>
+    <span class="badge">Free • Private • In-Browser</span>
+  </div>
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/tools/md-to-pdf.html">MD→PDF</a>
+    <a href="/tools/html-to-md.html">HTML→MD</a>
+    <a href="/tools/html-to-pdf.html">HTML→PDF</a>
+    <a href="/tools/md-to-html.html">MD→HTML</a>
+    <a href="/tools/text-to-clean-html.html">Text→Clean&nbsp;HTML</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</div>
+<div class="container section">
+  <div class="card">
+    <h1>Text → Clean HTML</h1>
+    <p class="lead">Paste plain text or messy Word HTML. Get minimal, semantic HTML. We strip styles/classes and keep the good stuff.</p>
+    <div class="ad-slot">Ad slot — 728×90</div>
+    <div class="tool-wrap">
+      <div>
+        <label for="rawInput">Text or HTML input</label>
+        <textarea id="rawInput" placeholder="Paste raw text or HTML from Word here..."></textarea>
+      </div>
+      <div class="controls">
+        <button class="btn" id="cleanBtn">Convert to Clean HTML</button>
+        <button class="btn secondary" id="copyBtn" disabled>Copy HTML</button>
+        <button class="btn secondary" id="sampleTextBtn">Load text sample</button>
+        <button class="btn secondary" id="sampleHtmlBtn">Load Word-HTML sample</button>
+      </div>
+      <div>
+        <label for="htmlOutput">Clean HTML</label>
+        <textarea id="htmlOutput" class="output" readonly placeholder="Clean HTML will appear here..."></textarea>
+      </div>
+      <div>
+        <label>Preview</label>
+        <div id="preview" class="preview card" style="min-height:240px;background:white;color:#051225;border:0"></div>
+      </div>
+      <div class="ad-slot">Ad slot — responsive</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>What we keep vs remove</h2>
+    <table>
+      <tr><th>Kept</th><th>Removed</th></tr>
+      <tr><td>p, h1–h6, ul, ol, li, a[href], strong/b, em/i, code, pre, table, thead, tbody, tr, th, td</td><td>style, class, span, font, script, iframe, inline styles</td></tr>
+    </table>
+  </div>
+</div>
+<div class="footer container">
+  <div>© <span id="year"></span> DocFlexify. No bullshit: 100% free, no accounts, no tracking beyond basic analytics.</div>
+  <div class="small">Privacy-first: conversions happen locally in your browser. Insert your ad script in the <code>.ad-slot</code> containers.</div>
+  <div class="small"><a href="/privacy.html">Privacy</a> • <a href="/terms.html">Terms</a> • <a href="/sitemap.xml">Sitemap</a></div>
+</div>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script src="/js/textToCleanHtml.js"></script>
+</body>
+</html>

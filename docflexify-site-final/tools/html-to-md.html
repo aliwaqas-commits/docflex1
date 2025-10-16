@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HTML to Markdown Converter (Free) | DocFlexify</title>
+<meta name="description" content="Paste HTML and get clean Markdown instantly. No uploads, in‑browser conversion. Free forever."/>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"/>
+<link rel="manifest" href="/manifest.json"/>
+<link rel="preload" href="/styles.css" as="style">
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "DocFlexify",
+  "url": "https://docflexify.vercel.app",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://docflexify.vercel.app/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this run locally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Conversion runs entirely in your browser for privacy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What HTML is supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common elements like headings, paragraphs, links, bold/italic, lists, and code blocks convert to Markdown."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it free forever?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 supported by simple, non\u2011intrusive ads."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="nav container">
+  <div class="brand">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M4 12c0-4.418 3.582-8 8-8a8 8 0 1 1-5.657 13.657" stroke="#8bc6ff" stroke-width="2" stroke-linecap="round"/></svg>
+    <span>DocFlexify</span>
+    <span class="badge">Free • Private • In‑Browser</span>
+  </div>
+  <div>
+    <a href="/index.html">Home</a>
+    <a href="/tools/md-to-pdf.html">MD→PDF</a>
+    <a href="/tools/html-to-md.html">HTML→MD</a>
+    <a href="/tools/html-to-pdf.html">HTML→PDF</a>
+    <a href="/tools/md-to-html.html">MD→HTML</a>
+    <a href="/tools/text-to-clean-html.html">Text→Clean&nbsp;HTML</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</div>
+
+<div class="container section">
+  <div class="card">
+    <h1>HTML → Markdown</h1>
+    <p class="lead">Paste raw HTML. Get clean Markdown. Great for docs, wikis, and static site content. Runs locally, no uploads.</p>
+    <div class="ad-slot">Ad slot — 728×90</div>
+    <div class="tool-wrap">
+      <div>
+        <label for="htmlInput">HTML input</label>
+        <textarea id="htmlInput" placeholder="<h1>Hello</h1><p>This becomes Markdown.</p>"></textarea>
+      </div>
+      <div class="controls">
+        <button class="btn" id="convertBtn">Convert to Markdown</button>
+        <button class="btn secondary" id="copyBtn" disabled>Copy Markdown</button>
+        <button class="btn secondary" id="sampleBtn">Load sample</button>
+      </div>
+      <div>
+        <label for="mdOutput">Markdown output</label>
+        <textarea id="mdOutput" class="output" readonly placeholder="Markdown will appear here..."></textarea>
+      </div>
+      <div class="ad-slot">Ad slot — responsive</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Tips for best results</h2>
+    <ul>
+      <li>Use semantic HTML — proper headings, lists, and links.</li>
+      <li>For code blocks, ensure they’re wrapped with <code>&lt;pre&gt;&lt;code&gt;</code>.</li>
+      <li>Tables convert best when markup is simple.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer container">
+  <div>© <span id="year"></span> DocFlexify. No bullshit: 100% free, no accounts, no tracking beyond basic analytics.</div>
+  <div class="small">Privacy-first: conversions happen locally in your browser. Insert your ad script in the <code>.ad-slot</code> containers.</div>
+  <div class="small"><a href="/privacy.html">Privacy</a> • <a href="/terms.html">Terms</a> • <a href="/sitemap.xml">Sitemap</a></div>
+</div>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+
+<script src="/js/htmlToMd.js"></script>
+</body>
+</html>
